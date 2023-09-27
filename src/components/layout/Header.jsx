@@ -6,7 +6,7 @@ const Header = () => {
         <AppBar position="static">
             <Container maxWidth='lg'>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} flex={1}>
+          <Typography variant="h6" component="div" fontWeight="500" sx={{ flexGrow: 1 }} flex={1}>
             وبلاگ محمد علی
           </Typography>
           <IconButton
