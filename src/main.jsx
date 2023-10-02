@@ -11,9 +11,10 @@ import { ThemeProvider } from '@emotion/react'
 
 
 const client = new ApolloClient({
-  uri: "https://api-us-west-2.hygraph.com/v2/clmxagfip1g0n01up58ttg6h7/master",
+  // uri: process.env.REACT_APP_GRAPHCMS_URI,
   cache: new InMemoryCache()
-})
+});
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ApolloProvider client={client}>
