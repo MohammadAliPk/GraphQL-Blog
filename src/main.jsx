@@ -8,6 +8,7 @@ import theme from './mui/theme.js'
 
 import { ApolloClient , InMemoryCache , ApolloProvider } from '@apollo/client'
 import { ThemeProvider } from '@emotion/react'
+import { BrowserRouter } from "react-router-dom"
 
 
 const client = new ApolloClient({
@@ -18,8 +19,10 @@ const client = new ApolloClient({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ApolloProvider client={client}>
+    <BrowserRouter>
     <ThemeProvider theme={theme}>
     <App />
     </ThemeProvider>
+    </BrowserRouter>
   </ApolloProvider>,
 )
