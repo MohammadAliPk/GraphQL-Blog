@@ -11,7 +11,7 @@ import { ThemeProvider } from '@emotion/react'
 
 
 const client = new ApolloClient({
-  // uri: process.env.REACT_APP_GRAPHCMS_URI,
+  uri: import.meta.env.VITE_SOME_KEY,
   cache: new InMemoryCache()
 });
 
