@@ -5,12 +5,13 @@ import CardEL from '../shared/CardEL';
 // GraphQL
 import { useQuery } from '@apollo/client';
 import { GET_BLOGS_INFO } from '../../graphql/queries';
+import Loader from '../shared/Loader';
 
 const Blogs = () => {
     const {loading , data, errors} = useQuery(GET_BLOGS_INFO);
     console.log(data)
     
-    if (loading) return <h4>loading ...</h4>
+    if (loading) return <Loader />;
 
     if (errors) return <h4>There is something wrong</h4>
     
