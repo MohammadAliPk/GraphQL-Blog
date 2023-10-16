@@ -8,6 +8,7 @@ import { ArrowBackRounded } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import sanitizeHtml from 'sanitize-html';
 import CommentForm from '../comment/CommentForm';
+import Comments from '../comment/Comments';
 
 const BlogPage = () => {
     const { slug } = useParams();
@@ -44,6 +45,9 @@ const BlogPage = () => {
                     </Grid>
                     <Grid item xs={12}>
                         <CommentForm slug={slug}/>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Comments slug={slug}/>
                     </Grid>
             </Grid>
         </Container>
