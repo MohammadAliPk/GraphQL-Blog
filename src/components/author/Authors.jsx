@@ -7,7 +7,6 @@ import Loader from '../shared/Loader';
 const Authors = () => {
     const {loading , data , errors} = useQuery(GET_AUTHORS_INFO);
 
-    console.log(data)
 
     if(loading) return <Loader />
 
